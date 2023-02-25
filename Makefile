@@ -10,8 +10,6 @@ setup:
 	@pip3 install -r scripts/requirements.txt
 
 download: setup
-	@pip3 install -r scripts/requirements.txt
-	@huggingface-cli login
 	@python3 scripts/download.py
 
 # Sync to remote GPU server

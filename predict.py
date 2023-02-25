@@ -36,7 +36,7 @@ class Predictor(BasePredictor):
         height: int = Input(description="Height", ge=0, le=1024, default=640),
         steps: int = Input(description="Steps", ge=0, le=100, default=20),
         guidance: float = Input(description="Higher add more prompt into image", ge=0.0, le=15.0, default=7.0),
-        seed: int = Input(description="Seed", default=0, ge=0, le=0xffff_ffff_ffff_ffff),
+        seed: int = Input(description="Seed", default=0),
         hires: bool = Input(description="Generate high resoultion version", default=False)
     ) -> Iterator[Path]:
         seed = torch.seed() if seed == 0 else seed

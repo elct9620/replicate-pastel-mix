@@ -2,3 +2,4 @@ diffusers
 transformers
 huggingface_hub
 safetensors
+accelerate
